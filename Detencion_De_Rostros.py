@@ -4,7 +4,7 @@ import  cv2
 color = (255, 0, 0)
 grosor = 2
 
-clasificador = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+clasificador = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 captura_video = cv2.VideoCapture(0)
 
 while True:
@@ -17,9 +17,9 @@ while True:
 	for (x, y, ancho, alto) in caras:
 		cv2.rectangle(ventana, (x, y), (x + ancho, y + alto), color, grosor)
 
-	cv2.imshow("Video", ventana)
+	cv2.imshow('Video', ventana)
 
-	if cv2.waitKey(1) == ord("q"):
+	if cv2.waitKey(1) == ord('q'):
 		break
 
 cv2.destroyAllWindows()

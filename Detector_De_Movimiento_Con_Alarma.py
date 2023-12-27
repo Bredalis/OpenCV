@@ -20,7 +20,9 @@ while True:
 	camara_dilatada = cv2.dilate(limite, None, iterations = 3)
 
 	# Contornos
-	contornos, _ = cv2.findContours(camara_dilatada, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+	contornos, _ = cv2.findContours(camara_dilatada, cv2.RETR_TREE, 
+		cv2.CHAIN_APPROX_SIMPLE)
 	cv2.drawContours(camara, contornos, -1, (0, 0, 255), 2)
 
 	for contorno in contornos:
@@ -28,17 +30,21 @@ while True:
 			continue
 
 		# Coordenadas
+
 		x, y, w, h = cv2.boundingRect(contorno)
 
 		cv2.rectangle(camara, (x, y), (x + w, y + h), (0, 0, 255), 2)
 
 		# Sonido cuando detecte movimiento
-		winsound.PlaySound("C:/Users/Angelica Gerrero/Videos/Campana.wav", winsound.SND_ASYNC)
+
+		winsound.PlaySound('C:/Users/Angelica Gerrero/Videos/Campana.wav', 
+			winsound.SND_ASYNC)
 
 	# Mostrar ventana
-	cv2.imshow("Detector de movimiento", camara_gris)
 
-	if cv2.waitKey(10) == ord("q"):
+	cv2.imshow('Detector de movimiento', camara_gris)
+
+	if cv2.waitKey(10) == ord('q'):
 		break
 
 cv2.destroyAllWindows()
