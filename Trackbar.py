@@ -32,11 +32,13 @@ while True:
 	else:
 		img[:] = [rojo, verde, azul]
 
-	cv2.imshow('Imagen original', img)
+	cv2.imshow('Paleta de colores', img)
 	c = cv2.waitKey(1) & 0xFF
 
 	# Cerrar ventana
 	if c == 27:
 		break
+
+print(f'Colores RGB: {rojo}, {verde}, {azul}')
 
 cv2.destroyAllWindows()
