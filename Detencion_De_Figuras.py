@@ -3,7 +3,7 @@ from StackImages import *
 
 # Leer imagen
 
-url = 'C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Figuras.jpg'
+url = 'C:/Users/Bradalis/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Figuras.jpg'
 img = cv2.imread(url)
 
 # Escala de grises

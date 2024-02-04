@@ -4,7 +4,7 @@ import numpy as np
 
 # Leer imagen
 
-url = 'C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Genero.png'
+url = 'C:/Users/Bradalis/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Genero.png'
 img = cv2.imread(url)
 
 # Medida del logo

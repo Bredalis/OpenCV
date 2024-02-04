@@ -3,7 +3,7 @@ import cv2
 
 # Leer la imagen
 
-url = 'C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Python.png'
+url = 'C:/Users/Bradalis/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Python.png'
 img = cv2.imread(url)
 
 # Redimensionar tamaño

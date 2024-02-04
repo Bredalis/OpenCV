@@ -65,7 +65,7 @@ def detectar_figuras(img):
 
 # Cargar la imagen
 
-url = 'C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Utileria_1.png'
+url = 'C:/Users/Bradalis/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Utileria_1.png'
 img = cv2.imread(url)
 img = cv2.resize(img, (500, 500))
 

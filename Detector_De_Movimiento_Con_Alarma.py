@@ -37,7 +37,7 @@ while True:
 
 		# Sonido cuando detecte movimiento
 
-		winsound.PlaySound('C:/Users/Angelica Gerrero/Videos/Campana.wav', 
+		winsound.PlaySound('Campana.mp3', 
 			winsound.SND_ASYNC)
 
 	# Mostrar ventana

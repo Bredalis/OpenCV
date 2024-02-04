@@ -10,7 +10,7 @@ def nada():
 
 # Leer imagen
 
-url = 'C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Paisaje.jpg'
+url = 'C:/Users/Bradalis/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Paisaje.jpg'
 img = cv2.imread(url)
 img = cv2.resize(img, (400, 300))
 

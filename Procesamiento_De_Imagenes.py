@@ -4,7 +4,7 @@ import numpy as np
 
 # Leer imagen
 
-url = 'C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Utileria_2.png'
+url = 'C:/Users/Bradalis/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Utileria_2.png'
 img = cv2.imread(url)
 
 kernel = np.ones((5, 5), np.uint8)

@@ -9,7 +9,7 @@ color_texto = (0, 0, 0)
 
 # Leer imagen
 
-url = 'C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Colores.jpg'
+url = 'C:/Users/Bradalis/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Colores.jpg'
 img = cv2.imread(url)
 img = cv2.resize(img, (500, 400))
 
