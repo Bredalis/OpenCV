@@ -14,6 +14,8 @@ while True:
 
 	caras = clasificador.detectMultiScale(ventana_gris)
 
+	# Detectar los rostros
+
 	for (x, y, ancho, alto) in caras:
 		cv2.rectangle(ventana, (x, y), (x + ancho, y + alto), color, grosor)
 

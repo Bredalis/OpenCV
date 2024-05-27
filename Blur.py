@@ -1,6 +1,5 @@
 
-# Filtro Blur 
-# en los rostros
+# Filtro Blur en los rostros
 
 import cv2
 

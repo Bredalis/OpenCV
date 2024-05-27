@@ -21,7 +21,6 @@ dilatacion = cv2.dilate(erosion, kernel, iterations = 3)
 # Suavizar imagen
 
 gauss = cv2.GaussianBlur(dilatacion, (5, 5), 0)
-
 img_canny = cv2.Canny(gauss, 100, 50)
 
 # Contornos

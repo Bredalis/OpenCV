@@ -1,8 +1,4 @@
 
-# Controlar el canny
-# de cualquier imagen
-# con Trackbars
-
 import cv2
 
 def nada():
@@ -17,6 +13,8 @@ img = cv2.resize(img, (400, 300))
 cv2.namedWindow("canny")
 cv2.createTrackbar("bajo", "canny", 0, 255, nada)
 cv2.createTrackbar("alto", "canny", 0, 255, nada)
+
+# Barra para activar el color
 
 switch = "0 : 0FF \n 1 : ON"
 cv2.createTrackbar(switch, "canny", 0, 1, nada)

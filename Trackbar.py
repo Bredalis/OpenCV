@@ -14,8 +14,9 @@ cv2.createTrackbar("Rojo", "Imagen", 0, 255, nada)
 cv2.createTrackbar("Verde", "Imagen", 0, 255, nada)
 cv2.createTrackbar("Azul", "Imagen", 0, 255, nada)
 
-switch = "0 : 0FF \n 1 : 0N"
+# Barra para activar el color
 
+switch = "0 : 0FF \n 1 : 0N"
 cv2.createTrackbar(switch, "Imagen", 0, 1, nada)
 
 while True:
@@ -36,6 +37,7 @@ while True:
 	c = cv2.waitKey(1) & 0xFF
 
 	# Cerrar ventana
+	
 	if c == 27:
 		break
 

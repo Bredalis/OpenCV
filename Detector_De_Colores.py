@@ -55,57 +55,22 @@ while True:
 		cv2.CHAIN_APPROX_SIMPLE)
 	contorno_4 = imutils.grab_contours(contorno_4)
 
-	for c in contorno_1:
-		area_1 = cv2.contourArea(c)
+	colores = ["Amarillo", "Rojo", "Verde", "Azul"]
+	contornos = [contorno_1, contorno_2, contorno_3, contorno_4]
 
-		if area_1 > 5000:
-			cv2.drawContours(ventana, [c], -1, (38, 255, 255), 3)
-			m = cv2.moments(c)
-			cx = int(m["m10"] / m["m00"])
-			cy = int(m["m01"] / m["m00"])
+	for i in range(len(contornos)):
+		for c in contornos[i]:
+			area_1 = cv2.contourArea(c)
 
-			cv2.circle(ventana, (cx, cy), 7, (255, 255, 255), -1)
-			cv2.putText(ventana, "Amarillo", (cx - 20, cy - 20), 
-				cv2.FONT_ITALIC, 2, (255, 255, 255), 2)
+			if area_1 > 5000:
+				cv2.drawContours(ventana, [c], -1, (38, 255, 255), 3)
+				m = cv2.moments(c)
+				cx = int(m["m10"] / m["m00"])
+				cy = int(m["m01"] / m["m00"])
 
-	for c in contorno_2:
-		area_1 = cv2.contourArea(c)
-
-		if area_1 > 5000:
-			cv2.drawContours(ventana, [c], -1, (38, 255, 255), 3)
-			m = cv2.moments(c)
-			cx = int(m["m10"] / m["m00"])
-			cy = int(m["m01"] / m["m00"])
-
-			cv2.circle(ventana, (cx, cy), 7, (255, 255, 255), -1)
-			cv2.putText(ventana, "Rojo", (cx - 20, cy - 20), 
-				cv2.FONT_ITALIC, 2, (255, 255, 255), 2)
-
-	for c in contorno_3:
-		area_1 = cv2.contourArea(c)
-
-		if area_1 > 5000:
-			cv2.drawContours(ventana, [c], -1, (38, 255, 255), 3)
-			m = cv2.moments(c)
-			cx = int(m["m10"] / m["m00"])
-			cy = int(m["m01"] / m["m00"])
-
-			cv2.circle(ventana, (cx, cy), 7, (255, 255, 255), -1)
-			cv2.putText(ventana, "Verde", (cx - 20, cy - 20), 
-				cv2.FONT_ITALIC, 2, (255, 255, 255), 2)
-
-	for c in contorno_4:
-		area_1 = cv2.contourArea(c)
-
-		if area_1 > 5000:
-			cv2.drawContours(ventana, [c], -1, (38, 255, 255), 3)
-			m = cv2.moments(c)
-			cx = int(m["m10"] / m["m00"])
-			cy = int(m["m01"] / m["m00"])
-
-			cv2.circle(ventana, (cx, cy), 7, (255, 255, 255), -1)
-			cv2.putText(ventana, "Azul", (cx - 20, cy - 20), 
-				cv2.FONT_ITALIC, 2, (255, 255, 255), 2)
+				cv2.circle(ventana, (cx, cy), 7, (255, 255, 255), -1)
+				cv2.putText(ventana, colores[i], (cx - 20, cy - 20), 
+					cv2.FONT_ITALIC, 2, (255, 255, 255), 2)
 
 	# Mostrar imagen
 
